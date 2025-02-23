@@ -294,7 +294,7 @@
         <!-- Ground Truth -->
         <div class="columns is-vcentered">
           <div class="column is-one-third has-text-right">
-            <h2 class="subtitle is-6">Ground Truth:</h2>
+            <p class="description-text">Ground Truth:</p>
           </div>
           <div class="column">
             <img src="static/videos/gt-fps3.gif" alt="Ground truth"/>
@@ -304,7 +304,7 @@
         <!-- Neural SDE 3FPS -->
         <div class="columns is-vcentered">
           <div class="column is-one-third has-text-right">
-            <h2 class="subtitle is-6">Neural SDE (3 FPS):</h2>
+            <p class="description-text">Neural SDE (3 FPS):</p>
           </div>
           <div class="column">
             <img src="static/videos/sde-fps3.gif" alt="SDE 3FPS"/>
@@ -314,7 +314,7 @@
         <!-- Neural SDE 6FPS -->
         <div class="columns is-vcentered">
           <div class="column is-one-third has-text-right">
-            <h2 class="subtitle is-6">Neural SDE (6 FPS):</h2>
+            <p class="description-text">Neural SDE (6 FPS):</p>
           </div>
           <div class="column">
             <img src="static/videos/sde-fps6.gif" alt="SDE 6FPS"/>
@@ -324,7 +324,7 @@
         <!-- Neural SDE 12FPS -->
         <div class="columns is-vcentered">
           <div class="column is-one-third has-text-right">
-            <h2 class="subtitle is-6">Neural SDE (12 FPS):</h2>
+            <p class="description-text">Neural SDE (12 FPS):</p>
           </div>
           <div class="column">
             <img src="static/videos/sde-fps12.gif" alt="SDE 12FPS"/>
@@ -334,7 +334,7 @@
         <!-- Neural SDE 24FPS -->
         <div class="columns is-vcentered">
           <div class="column is-one-third has-text-right">
-            <h2 class="subtitle is-6">Neural SDE (24 FPS):</h2>
+            <p class="description-text">Neural SDE (24 FPS):</p>
           </div>
           <div class="column">
             <img src="static/videos/sde-fps24.gif" alt="SDE 24FPS"/>
@@ -344,7 +344,7 @@
         <!-- PFI -->
         <div class="columns is-vcentered">
           <div class="column is-one-third has-text-right">
-            <h2 class="subtitle is-6">Probabilistic Forecasting with Interpolant (3 FPS):</h2>
+            <p class="description-text">Probabilistic Forecasting with Interpolant (3 FPS):</p>
           </div>
           <div class="column">
             <img src="static/videos/pfi-fps3.gif" alt="PFI"/>
@@ -354,7 +354,7 @@
         <!-- FM -->
         <div class="columns is-vcentered">
           <div class="column is-one-third has-text-right">
-            <h2 class="subtitle is-6">Flow Matching (3 FPS):</h2>
+            <p class="description-text">Flow Matching (3 FPS):</p>
           </div>
           <div class="column">
             <img src="static/videos/fm-fps3.gif" alt="FM"/>
@@ -369,7 +369,7 @@
 <style>
 /* Add this to your CSS */
 .hero-body .columns .column img {
-  margin: 0 -100px;
+  margin: -25px -100px;
   padding: 0;
   display: block;
 }
@@ -385,6 +385,11 @@
 .hero-body .columns .column img {
   position: relative;
   z-index: 1;
+}
+
+.description-text {
+  font-size: 0.9rem;
+  font-weight: normal;
 }
 </style>
 
