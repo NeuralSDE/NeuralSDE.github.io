@@ -151,28 +151,24 @@
 <!-- End teaser image -->
 
 <!-- Paper abstract -->
-<section class="section hero is-light">
+<section class="section">
   <div class="container is-max-desktop">
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title">Abstract</h2>
-        <div class="content has-text-justified">
-          <p>
-            Inspired by the ubiquitous use of differential equations to model continuous dynamics across diverse scientific and engineering domains, we propose a novel and intuitive approach to continuous
-            sequence modeling. Our method interprets timeseries data as discrete samples from an underlying continuous dynamical system, and models
-            its time evolution using Neural Stochastic Differential Equation (Neural SDE), where both the
-            flow (drift) and diffusion terms are parameterized by neural networks. We derive a principled
-            maximum likelihood objective and a simulationfree scheme for efficient training of our Neural
-            SDE model. We demonstrate the versatility of
-            our approach through experiments on sequence
-            modeling tasks across both embodied and generative AI 1
-            . Notably, to the best of our knowledge, this is the first work to show that SDEbased continuous-time modeling also excels in
-            such complex scenarios, and we hope that our
-            work opens up new avenues for research of SDE
-            models in high-dimensional and temporally intricate domains.
-          </p>
-        </div>
-      </div>
+    <h2 class="title">Abstract</h2>
+    <div class="content has-text-justified">
+      <p>
+        Inspired by the ubiquitous use of differential equations to model continuous dynamics across diverse scientific and engineering domains, we propose a novel and intuitive approach to continuous
+        sequence modeling. Our method interprets timeseries data as discrete samples from an underlying continuous dynamical system, and models
+        its time evolution using Neural Stochastic Differential Equation (Neural SDE), where both the
+        flow (drift) and diffusion terms are parameterized by neural networks. We derive a principled
+        maximum likelihood objective and a simulationfree scheme for efficient training of our Neural
+        SDE model. We demonstrate the versatility of
+        our approach through experiments on sequence
+        modeling tasks across both embodied and generative AI 1
+        . Notably, to the best of our knowledge, this is the first work to show that SDEbased continuous-time modeling also excels in
+        such complex scenarios, and we hope that our
+        work opens up new avenues for research of SDE
+        models in high-dimensional and temporally intricate domains.
+      </p>
     </div>
   </div>
 </section>
@@ -286,79 +282,77 @@
 <!--End paper poster -->
 
 <!-- High Temporal Resolution Video -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container" style="max-width: 1500px;">
-      <h2 class="title">High Temporal Resolution Video</h2>
-      <div class="content">
-        <!-- Ground Truth -->
-        <div class="columns is-vcentered">
-          <div class="column is-one-third has-text-right">
-            <p class="description-text">Ground Truth (3 FPS):</p>
-          </div>
-          <div class="column">
-            <img src="static/videos/gt-fps3.gif" alt="Ground truth"/>
-          </div>
+<section class="section">
+  <div class="container is-max-desktop">
+    <h2 class="title">High Temporal Resolution Video</h2>
+    <div class="content">
+      <!-- Ground Truth -->
+      <div class="columns is-vcentered">
+        <div class="column is-one-third has-text-right">
+          <p class="description-text">Ground Truth (3 FPS):</p>
         </div>
-
-        <!-- Neural SDE 3FPS -->
-        <div class="columns is-vcentered">
-          <div class="column is-one-third has-text-right">
-            <p class="description-text">Neural SDE (3 FPS):</p>
-          </div>
-          <div class="column">
-            <img src="static/videos/sde-fps3.gif" alt="SDE 3FPS"/>
-          </div>
+        <div class="column">
+          <img src="static/videos/gt-fps3.gif" alt="Ground truth"/>
         </div>
+      </div>
 
-        <!-- Neural SDE 6FPS -->
-        <div class="columns is-vcentered">
-          <div class="column is-one-third has-text-right">
-            <p class="description-text">Neural SDE (6 FPS):</p>
-          </div>
-          <div class="column">
-            <img src="static/videos/sde-fps6.gif" alt="SDE 6FPS"/>
-          </div>
+      <!-- Neural SDE 3FPS -->
+      <div class="columns is-vcentered">
+        <div class="column is-one-third has-text-right">
+          <p class="description-text">Neural SDE (3 FPS):</p>
         </div>
-
-        <!-- Neural SDE 12FPS -->
-        <div class="columns is-vcentered">
-          <div class="column is-one-third has-text-right">
-            <p class="description-text">Neural SDE (12 FPS):</p>
-          </div>
-          <div class="column">
-            <img src="static/videos/sde-fps12.gif" alt="SDE 12FPS"/>
-          </div>
+        <div class="column">
+          <img src="static/videos/sde-fps3.gif" alt="SDE 3FPS"/>
         </div>
+      </div>
 
-        <!-- Neural SDE 24FPS -->
-        <div class="columns is-vcentered">
-          <div class="column is-one-third has-text-right">
-            <p class="description-text">Neural SDE (24 FPS):</p>
-          </div>
-          <div class="column">
-            <img src="static/videos/sde-fps24.gif" alt="SDE 24FPS"/>
-          </div>
+      <!-- Neural SDE 6FPS -->
+      <div class="columns is-vcentered">
+        <div class="column is-one-third has-text-right">
+          <p class="description-text">Neural SDE (6 FPS):</p>
         </div>
-
-        <!-- PFI -->
-        <div class="columns is-vcentered">
-          <div class="column is-one-third has-text-right">
-            <p class="description-text">Stochastic Interpolant (3 FPS):</p>
-          </div>
-          <div class="column">
-            <img src="static/videos/pfi-fps3.gif" alt="PFI"/>
-          </div>
+        <div class="column">
+          <img src="static/videos/sde-fps6.gif" alt="SDE 6FPS"/>
         </div>
+      </div>
 
-        <!-- FM -->
-        <div class="columns is-vcentered">
-          <div class="column is-one-third has-text-right">
-            <p class="description-text">Flow Matching (3 FPS):</p>
-          </div>
-          <div class="column">
-            <img src="static/videos/fm-fps3.gif" alt="FM"/>
-          </div>
+      <!-- Neural SDE 12FPS -->
+      <div class="columns is-vcentered">
+        <div class="column is-one-third has-text-right">
+          <p class="description-text">Neural SDE (12 FPS):</p>
+        </div>
+        <div class="column">
+          <img src="static/videos/sde-fps12.gif" alt="SDE 12FPS"/>
+        </div>
+      </div>
+
+      <!-- Neural SDE 24FPS -->
+      <div class="columns is-vcentered">
+        <div class="column is-one-third has-text-right">
+          <p class="description-text">Neural SDE (24 FPS):</p>
+        </div>
+        <div class="column">
+          <img src="static/videos/sde-fps24.gif" alt="SDE 24FPS"/>
+        </div>
+      </div>
+
+      <!-- PFI -->
+      <div class="columns is-vcentered">
+        <div class="column is-one-third has-text-right">
+          <p class="description-text">Stochastic Interpolant (3 FPS):</p>
+        </div>
+        <div class="column">
+          <img src="static/videos/pfi-fps3.gif" alt="PFI"/>
+        </div>
+      </div>
+
+      <!-- FM -->
+      <div class="columns is-vcentered">
+        <div class="column is-one-third has-text-right">
+          <p class="description-text">Flow Matching (3 FPS):</p>
+        </div>
+        <div class="column">
+          <img src="static/videos/fm-fps3.gif" alt="FM"/>
         </div>
       </div>
     </div>
@@ -401,11 +395,13 @@
 </style>
 
 <!--BibTeX citation -->
-  <section class="section" id="BibTeX">
-    <div class="container is-max-desktop content">
-      <h2 class="title">BibTeX</h2>
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop">
+    <h2 class="title">BibTeX</h2>
+    <div class="content">
       <pre><code>BibTex Code Here</code></pre>
     </div>
+  </div>
 </section>
 <!--End BibTeX citation -->
 
