@@ -55,18 +55,18 @@
             <span class="title is-1 publication-title">Neural SDEs</span><br><span class="is-size-5 publication-authors author-block">as a Unified Approach to Continuous-Domain Sequence Modeling</span>
             <div class="is-size-5 publication-authors">
               <!-- Paper authors -->
-              <span class="author-block">
+              <!-- <span class="author-block">
                 <a href="FIRST AUTHOR PERSONAL LINK" target="_blank">First Author</a><sup>*</sup>,</span>
                 <span class="author-block">
                   <a href="SECOND AUTHOR PERSONAL LINK" target="_blank">Second Author</a><sup>*</sup>,</span>
                   <span class="author-block">
                     <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Third Author</a>
-                  </span>
+                  </span> -->
                   </div>
 
                   <div class="is-size-5 publication-authors">
-                    <span class="author-block">Institution Name<br>Conferance name and year</span>
-                    <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span>
+                    <span class="author-block">Under Double-blind Review</span>
+                    <!-- <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span> -->
                   </div>
 
                   <div class="column has-text-centered">
@@ -145,6 +145,13 @@
   <div class="container is-max-desktop">
     <div class="hero-body">
       <img src="static/images/overview_figure.jpg" alt="Overview figure"/>
+      <span class="note">
+        Our approach introduces a new paradigm for
+        continuous-domain sequence modeling by representing dynamics with SDEs, instead of directly modeling conditional densities.
+        The Fokker-Planck equation provides the theoretical link between
+        these two paradigms, describing the time evolution of the probability density. This framework unifies embodied and generative AI
+        under the same continuous sequence modeling paradigm.
+      </span>
     </div>
   </div>
 </section>
@@ -288,13 +295,14 @@
     <div class="container is-max-desktop content">
       <span class="title">High Temporal Resolution Video</span><br>
       <span class="note">
-        Green border indicates ground truth context frames, while red border indicates predicted frames.<br>
+        Neural SDE is able to generate intermediate frames, demonstrating its capacity to generate videos at high temporal resolution even with relatively sparse
+        training data. Green borders indicate ground truth context frames, while Red border indicates predicted frames.
         All videos are sampled with 10 fixed steps per frame.
-      </span>
-      <div class="content">
+      </span><br>
+      <div class="content" style="margin-top: 20px;">
         <!-- Ground Truth -->
         <div class="columns is-vcentered">
-          <div class="column is-one-third has-text-right">
+          <div class="column is-one-third has-text-left">
             <p class="description-text">Ground Truth (3 FPS):</p>
           </div>
           <div class="column">
@@ -304,7 +312,7 @@
 
         <!-- Neural SDE 3FPS -->
         <div class="columns is-vcentered">
-          <div class="column is-one-third has-text-right">
+          <div class="column is-one-third has-text-left">
             <p class="description-text">Neural SDE (3 FPS):</p>
           </div>
           <div class="column">
@@ -314,7 +322,7 @@
 
         <!-- Neural SDE 6FPS -->
         <div class="columns is-vcentered">
-          <div class="column is-one-third has-text-right">
+          <div class="column is-one-third has-text-left">
             <p class="description-text">Neural SDE (6 FPS):</p>
           </div>
           <div class="column">
@@ -324,7 +332,7 @@
 
         <!-- Neural SDE 12FPS -->
         <div class="columns is-vcentered">
-          <div class="column is-one-third has-text-right">
+          <div class="column is-one-third has-text-left">
             <p class="description-text">Neural SDE (12 FPS):</p>
           </div>
           <div class="column">
@@ -334,7 +342,7 @@
 
         <!-- Neural SDE 24FPS -->
         <div class="columns is-vcentered">
-          <div class="column is-one-third has-text-right">
+          <div class="column is-one-third has-text-left">
             <p class="description-text">Neural SDE (24 FPS):</p>
           </div>
           <div class="column">
@@ -344,7 +352,7 @@
 
         <!-- PFI -->
         <div class="columns is-vcentered">
-          <div class="column is-one-third has-text-right">
+          <div class="column is-one-third has-text-left">
             <p class="description-text">Stochastic Interpolant (3 FPS):</p>
           </div>
           <div class="column">
@@ -354,7 +362,7 @@
 
         <!-- FM -->
         <div class="columns is-vcentered">
-          <div class="column is-one-third has-text-right">
+          <div class="column is-one-third has-text-left">
             <p class="description-text">Flow Matching (3 FPS):</p>
           </div>
           <div class="column">
@@ -370,10 +378,12 @@
 <style>
 /* Add this to your CSS */
 .hero-body .columns .column img {
-  margin: -20px -100px;
+  margin: 0px 0px 0px -350px;
   padding: 0;
   display: block;
-  width: 200%;
+  width: 100%;
+  transform: scale(1.6); 
+  transform-origin: left;  
 }
 
 .hero-body .columns .column {
@@ -390,17 +400,19 @@
 }
 
 .note{
-  font-size: 0.7rem;
+  font-family: 'Google Sans', sans-serif;
+  font-size: 1.0rem;
   font-weight: normal;
 }
 
 .description-text {
-  font-size: 0.9rem;
+  font-family: 'Google Sans', sans-serif;
+  font-size: 1.0rem;
   font-weight: normal;
   text-align: left;
   word-wrap: break-word;
   padding-right: 0px;
-  max-width: 85px;
+  max-width: 90px;
   margin: 0 auto;
   display: inline-block;
 }
