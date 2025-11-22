@@ -369,6 +369,36 @@
             <img src="static/videos/fm-fps3.gif" alt="FM"/>
           </div>
         </div>
+
+        <!-- FM 6FPS -->
+        <div class="columns is-vcentered">
+          <div class="column is-one-third has-text-left">
+            <p class="description-text">Flow Matching (Linear Interp., 6 FPS):</p>
+          </div>
+          <div class="column">
+            <img src="static/videos/fm-fps6.gif" alt="FM 6FPS"/>
+          </div>
+        </div>
+
+        <!-- FM 12FPS -->
+        <div class="columns is-vcentered">
+          <div class="column is-one-third has-text-left">
+            <p class="description-text">Flow Matching (Linear Interp., 12 FPS):</p>
+          </div>
+          <div class="column">
+            <img src="static/videos/fm-fps12.gif" alt="FM 12FPS"/>
+          </div>
+        </div>
+
+        <!-- FM 24FPS -->
+        <div class="columns is-vcentered">
+          <div class="column is-one-third has-text-left">
+            <p class="description-text">Flow Matching (Linear Interp., 24 FPS):</p>
+          </div>
+          <div class="column">
+            <img src="static/videos/fm-fps24.gif" alt="FM 24FPS"/>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -422,32 +452,32 @@
     <h3 class="title is-4" style="margin-top: 30px;">Generated Results (150k Iterations)</h3>
     
     <div class="columns is-centered">
-      <div class="column has-text-centered">
+      <!-- Joint Optimization -->
+      <div class="column is-one-quarter has-text-centered">
         <h5 class="title is-5">Joint Optimization</h5>
         <figure class="image">
           <img src="static/images/f_g_joint.gif" alt="f_g_joint result">
           <figcaption>f-g-joint</figcaption>
         </figure>
       </div>
-    </div>
 
-    <div class="columns is-centered">
-      <div class="column has-text-centered">
+      <!-- Decoupled Optimization -->
+      <div class="column is-three-quarters has-text-centered">
         <h5 class="title is-5">Decoupled Optimization</h5>
         <div class="columns is-centered">
-            <div class="column is-one-third">
+            <div class="column">
                 <figure class="image">
                   <img src="static/images/decoupled_f.gif" alt="decoupled_f result">
                   <figcaption>Decoupled F</figcaption>
                 </figure>
             </div>
-            <div class="column is-one-third">
+            <div class="column">
                 <figure class="image">
                   <img src="static/images/decoupled_d.gif" alt="decoupled_d result">
                   <figcaption>Decoupled D</figcaption>
                 </figure>
             </div>
-            <div class="column is-one-third">
+            <div class="column">
                 <figure class="image">
                   <img src="static/images/decoupled_g.gif" alt="decoupled_g result">
                   <figcaption>Decoupled G</figcaption>
