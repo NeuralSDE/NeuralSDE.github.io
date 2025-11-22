@@ -375,6 +375,92 @@
 </section>
 <!-- End High Temporal Resolution Video -->
 
+<!-- Comparison Section -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3 has-text-centered">Comparison: Joint vs Decoupled Optimization</h2>
+    <div class="content has-text-justified">
+      <p>
+        We compare the performance of joint optimization versus decoupled optimization. The difference is obvious. Below we show the loss curves and generated samples at 150k iterations.
+      </p>
+    </div>
+
+    <!-- Loss Curves -->
+    <h3 class="title is-4">Loss Curves (150k Iterations)</h3>
+    <div class="columns is-centered">
+      <div class="column is-half">
+        <figure class="image has-text-centered">
+          <img src="static/images/loss_curve_flow_matching.png" alt="Flow Matching Loss Curve" style="width: 100%;">
+          <figcaption style="text-align: left; margin-top: 10px;">
+            <strong>Flow Matching Loss:</strong>
+            <ul style="font-size: 0.9em;">
+              <li><strong>f-g-joint:</strong> <code>nn.MSELoss(f - &Delta;x/&Delta;t)</code></li>
+              <li><strong>f-01-nll:</strong> <code>nn.MSELoss(f - &Delta;x/&Delta;t)</code></li>
+              <li><strong>d-01:</strong> <code>nn.MSELoss(d + &epsilon;)</code></li>
+              <li><strong>g-01-nll:</strong> <code>nn.MSELoss(g - residual)</code></li>
+            </ul>
+          </figcaption>
+        </figure>
+      </div>
+      <div class="column is-half">
+         <figure class="image has-text-centered">
+          <img src="static/images/loss_curve_total.png" alt="Total Loss Curve" style="width: 100%;">
+          <figcaption style="text-align: left; margin-top: 10px;">
+            <strong>Total Loss (Gradient Backpropagation):</strong>
+            <ul style="font-size: 0.9em;">
+              <li><strong>f-g-joint:</strong> Joint NLL</li>
+              <li><strong>f-01-nll:</strong> <code>torch.log((f - &Delta;x/&Delta;t)<sup>2</sup> + &delta;) - torch.log(&delta;)</code></li>
+              <li><strong>d-01:</strong> <code>nn.MSELoss(d + &epsilon;)</code></li>
+              <li><strong>g-01-nll:</strong> <code>nn.MSELoss(g - residual)</code></li>
+            </ul>
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+
+    <!-- Generated Results -->
+    <h3 class="title is-4" style="margin-top: 30px;">Generated Results (150k Iterations)</h3>
+    
+    <div class="columns is-centered">
+      <div class="column has-text-centered">
+        <h5 class="title is-5">Joint Optimization</h5>
+        <figure class="image">
+          <img src="static/images/f_g_joint.gif" alt="f_g_joint result">
+          <figcaption>f-g-joint</figcaption>
+        </figure>
+      </div>
+    </div>
+
+    <div class="columns is-centered">
+      <div class="column has-text-centered">
+        <h5 class="title is-5">Decoupled Optimization</h5>
+        <div class="columns is-centered">
+            <div class="column is-one-third">
+                <figure class="image">
+                  <img src="static/images/decoupled_f.gif" alt="decoupled_f result">
+                  <figcaption>Decoupled F</figcaption>
+                </figure>
+            </div>
+            <div class="column is-one-third">
+                <figure class="image">
+                  <img src="static/images/decoupled_d.gif" alt="decoupled_d result">
+                  <figcaption>Decoupled D</figcaption>
+                </figure>
+            </div>
+            <div class="column is-one-third">
+                <figure class="image">
+                  <img src="static/images/decoupled_g.gif" alt="decoupled_g result">
+                  <figcaption>Decoupled G</figcaption>
+                </figure>
+            </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+<!-- End Comparison Section -->
+
 <style>
 /* Add this to your CSS */
 .hero-body .columns .column img {
