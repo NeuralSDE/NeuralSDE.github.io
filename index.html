@@ -491,6 +491,34 @@
 </section>
 <!-- End Comparison Section -->
 
+<!-- Inference Efficiency Section -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3 has-text-centered">Inference Efficiency</h2>
+    <div class="content has-text-justified">
+      <p>
+        We have updated the plot of wall-clock latency of generating 12 frames, conditioning on the first 4 frames on the VS batch size on a single RTX3090 under the setting of 2 steps per frame.
+      </p>
+    </div>
+
+    <div class="columns is-centered is-vcentered">
+      <div class="column is-half">
+        <figure class="image">
+          <img src="static/images/latency_vs_batch_size.png" alt="Latency vs Batch Size">
+          <figcaption class="has-text-centered">Wall-clock Latency vs Batch Size</figcaption>
+        </figure>
+      </div>
+      <div class="column is-half">
+        <figure class="image">
+          <img src="static/images/generated_bs_16.gif" alt="Generated sample batch size 16">
+          <figcaption class="has-text-centered">Generated Result (Batch Size = 16, 2 Steps)</figcaption>
+        </figure>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End Inference Efficiency Section -->
+
 <style>
 /* Add this to your CSS */
 .hero-body .columns .column img {
