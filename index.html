@@ -411,7 +411,7 @@
     <h2 class="title is-3 has-text-centered">Comparison: Joint vs Decoupled Optimization</h2>
     <div class="content has-text-justified">
       <p>
-        We compare the performance of joint optimization versus decoupled optimization. The difference is obvious. Below we show the loss curves and generated samples at 150k iterations.
+        We compare the effectiveness of joint optimization versus decoupled optimization. The decoupled strategy demonstrates superior training stability and visual quality compared to the joint approach. Below, we present the loss curves and generated samples at 150k iterations.
       </p>
     </div>
 
@@ -497,7 +497,7 @@
     <h2 class="title is-3 has-text-centered">Inference Efficiency</h2>
     <div class="content has-text-justified">
       <p>
-        We have updated the plot of wall-clock latency of generating 12 frames, conditioning on the first 4 frames on the VS batch size on a single RTX3090 under the setting of 2 steps per frame.
+        We evaluate the inference efficiency by measuring the wall-clock latency for generating 12 frames given 4 context frames, using a 2-step generation scheme on a single RTX3090 GPU.
       </p>
     </div>
 
