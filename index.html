@@ -245,7 +245,7 @@
   <div class="hero-body">
     <div class="container is-max-desktop">
       <h2 class="title is-3 has-text-centered">PushT Evaluation Examples</h2>
-      <div class="columns is-centered">
+      <div class="columns is-centered is-variable is-1">
         <div class="column">
           <video poster="" id="video1" autoplay controls muted loop height="100%">
             <source src="static/videos/5so44r4o.mp4" type="video/mp4">
@@ -413,7 +413,7 @@
     <h2 class="title is-3 has-text-centered">Comparison: Joint vs Decoupled Optimization</h2>
     <div class="content has-text-justified">
       <p>
-        To fairly compare joint versus decoupled optimization, we plot the mean squared residual of the drift term during training. Joint optimization consistently exhibits larger residuals with high variance. We hypothesize this stems from "denominator dominance," where the optimizer inflates the diffusion coefficient to suppress drift errors, thereby failing to capture the drift dynamics.
+        To fairly compare joint versus decoupled optimization, we plot the mean squared residual of the drift term during training. Joint optimization consistently exhibits larger residuals with high variance. We hypothesize this stems from "denominator dominance," where the optimizer inflates the diffusion term to suppress drift errors, thereby failing to capture the drift dynamics.
       </p>
     </div>
 
@@ -436,7 +436,7 @@
     
     <div class="columns is-centered">
       <!-- Joint Optimization -->
-      <div class="column is-one-quarter has-text-centered">
+      <div class="column is-one-third has-text-centered">
         <h5 class="title is-5">Joint Optimization</h5>
         <figure class="image">
           <img src="static/images/f_g_joint.gif" alt="f_g_joint result">
@@ -445,19 +445,20 @@
       </div>
 
       <!-- Decoupled Optimization -->
-      <div class="column is-three-quarters has-text-centered">
+      <div class="column is-two-thirds has-text-centered">
         <h5 class="title is-5">Decoupled Optimization</h5>
         <div class="columns is-centered">
             <div class="column">
                 <figure class="image">
                   <img src="static/images/decoupled_f.gif" alt="decoupled_f result">
-                  <figcaption>f</figcaption>
+                  <figcaption>decoupled f</figcaption>
                 </figure>
             </div>
+
             <div class="column">
                 <figure class="image">
                   <img src="static/images/decoupled_g.gif" alt="decoupled_g result">
-                  <figcaption>g</figcaption>
+                  <figcaption>decoupled f+g</figcaption>
                 </figure>
             </div>
         </div>
@@ -479,15 +480,15 @@
     </div>
 
     <div class="columns is-centered is-vcentered">
-      <div class="column is-half">
+      <div class="column is-one-third">
         <figure class="image">
           <img src="static/images/latency_vs_batch_size.png" alt="Latency vs Batch Size">
           <figcaption class="has-text-centered">Wall-clock Latency vs Batch Size</figcaption>
         </figure>
       </div>
-      <div class="column is-half">
+      <div class="column is-two-thirds">
         <figure class="image">
-          <img src="static/images/generated_bs_16.gif" alt="Generated sample batch size 16">
+          <img src="static/images/generated_bs_16.gif" alt="Generated sample batch size 16" style="transform: scale(1.5);">
           <figcaption class="has-text-centered">Generated Result (Batch Size = 16, 2 Steps)</figcaption>
         </figure>
       </div>
