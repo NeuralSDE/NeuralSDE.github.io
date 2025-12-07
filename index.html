@@ -245,28 +245,36 @@
   <div class="hero-body">
     <div class="container is-max-desktop">
       <h2 class="title is-3 has-text-centered">PushT Evaluation Examples</h2>
-      <div class="columns is-centered is-gapless">
-        <div class="column">
-          <video poster="" id="video1" autoplay controls muted loop height="100%">
+    <div class="columns is-centered is-gapless">
+      <div class="column">
+        <div class="publication-video">
+          <video poster="" id="video1" autoplay controls muted loop playsinline height="100%">
             <source src="static/videos/5so44r4o.mp4" type="video/mp4">
           </video>
         </div>
-        <div class="column">
-          <video poster="" id="video2" autoplay controls muted loop height="100%">
+      </div>
+      <div class="column">
+        <div class="publication-video">
+          <video poster="" id="video2" autoplay controls muted loop playsinline height="100%">
             <source src="static/videos/ebly0s9l.mp4" type="video/mp4">
           </video>
         </div>
-        <div class="column">
-          <video poster="" id="video3" autoplay controls muted loop height="100%">
+      </div>
+      <div class="column">
+        <div class="publication-video">
+          <video poster="" id="video3" autoplay controls muted loop playsinline height="100%">
             <source src="static/videos/3foi84dv.mp4" type="video/mp4">
           </video>
         </div>
-        <div class="column">
-          <video poster="" id="video4" autoplay controls muted loop height="100%">
+      </div>
+      <div class="column">
+        <div class="publication-video">
+          <video poster="" id="video4" autoplay controls muted loop playsinline height="100%">
             <source src="static/videos/y5cujvd7.mp4" type="video/mp4">
           </video>
         </div>
       </div>
+    </div>
     </div>
   </div>
 </section>
@@ -427,7 +435,12 @@
     </div>
 
     <!-- Generated Results -->
-    <h3 class="title is-4" style="margin-top: 30px;">Generated Results (150k Iterations;The first 4 frames are context frames.)</h3>
+    <h3 class="title is-4" style="margin-top: 30px;">Generated Results (150k Iterations)</h3>
+    <div class="content has-text-left">
+      <p>
+        Note: The first 4 frames are context frames.
+      </p>
+    </div>
     
     <div class="columns is-centered">
       <!-- Joint Optimization -->
@@ -475,15 +488,15 @@
     </div>
 
     <div class="columns is-centered is-vcentered">
-      <div class="column is-half">
+      <div class="column is-one-third">
         <figure class="image">
           <img src="static/images/latency_vs_batch_size.png" alt="Latency vs Batch Size">
           <figcaption class="has-text-centered">Wall-clock Latency vs Batch Size</figcaption>
         </figure>
       </div>
-      <div class="column is-half">
+      <div class="column is-two-thirds">
         <figure class="image">
-          <img src="static/images/generated_bs_16.gif" alt="Generated sample batch size 16" style="transform: scale(1.5);">
+          <img src="static/images/generated_bs_16.gif" alt="Generated sample batch size 16" style="transform: scale(1.5); transform-origin: left;">
           <figcaption class="has-text-centered">Generated Result (Batch Size = 16, 2 Steps)</figcaption>
         </figure>
       </div>
@@ -495,9 +508,12 @@
 <style>
 /* Add this to your CSS */
 .hero-body .columns .column img {
+  margin: 0px 0px 0px -350px;
   padding: 0;
   display: block;
   width: 100%;
+  transform: scale(1.6); 
+  transform-origin: left;  
 }
 
 .hero-body .columns .column {
