@@ -413,45 +413,26 @@
     <h2 class="title is-3 has-text-centered">Comparison: Joint vs Decoupled Optimization</h2>
     <div class="content has-text-justified">
       <p>
-        We compare the effectiveness of joint optimization versus decoupled optimization. The decoupled strategy demonstrates superior training stability and visual quality compared to the joint approach. Below, we present the loss curves and generated samples at 150k iterations.
+        To fairly compare joint versus decoupled optimization, we plot the mean squared residual of the drift term during training. Joint optimization consistently exhibits larger residuals with high variance. We hypothesize this stems from "denominator dominance," where the optimizer inflates the diffusion coefficient to suppress drift errors, thereby failing to capture the drift dynamics.
       </p>
     </div>
 
-    <!-- Loss Curves -->
-    <h3 class="title is-4">Loss Curves (150k Iterations)</h3>
     <div class="columns is-centered">
-      <div class="column is-half">
+      <div class="column is-four-fifths">
         <figure class="image has-text-centered">
-          <img src="static/images/loss_curve_flow_matching.png" alt="Flow Matching Loss Curve" style="width: 100%;">
-          <figcaption style="text-align: left; margin-top: 10px;">
-            <strong>Flow Matching Loss:</strong>
-            <ul style="font-size: 0.9em;">
-              <li><strong>f-g-joint:</strong> <code>nn.MSELoss(f - &Delta;x/&Delta;t)</code></li>
-              <li><strong>f-01-nll:</strong> <code>nn.MSELoss(f - &Delta;x/&Delta;t)</code></li>
-              <li><strong>d-01:</strong> <code>nn.MSELoss(d + &epsilon;)</code></li>
-              <li><strong>g-01-nll:</strong> <code>nn.MSELoss(g - residual)</code></li>
-            </ul>
-          </figcaption>
-        </figure>
-      </div>
-      <div class="column is-half">
-         <figure class="image has-text-centered">
-          <img src="static/images/loss_curve_total.png" alt="Total Loss Curve" style="width: 100%;">
-          <figcaption style="text-align: left; margin-top: 10px;">
-            <strong>Total Loss (Gradient Backpropagation):</strong>
-            <ul style="font-size: 0.9em;">
-              <li><strong>f-g-joint:</strong> Joint NLL</li>
-              <li><strong>f-01-nll:</strong> <code>torch.log((f - &Delta;x/&Delta;t)<sup>2</sup> + &delta;) - torch.log(&delta;)</code></li>
-              <li><strong>d-01:</strong> <code>nn.MSELoss(d + &epsilon;)</code></li>
-              <li><strong>g-01-nll:</strong> <code>nn.MSELoss(g - residual)</code></li>
-            </ul>
-          </figcaption>
+          <img src="static/images/optimization%20comparison.png" alt="Optimization Comparison" style="width: 100%;">
+          <figcaption>MSE residual Curves for Joint vs. Decoupled Optimization.</figcaption>
         </figure>
       </div>
     </div>
 
     <!-- Generated Results -->
     <h3 class="title is-4" style="margin-top: 30px;">Generated Results (150k Iterations)</h3>
+    <div class="content has-text-centered">
+      <p>
+        Note: The first 4 frames are context frames.
+      </p>
+    </div>
     
     <div class="columns is-centered">
       <!-- Joint Optimization -->
@@ -470,19 +451,13 @@
             <div class="column">
                 <figure class="image">
                   <img src="static/images/decoupled_f.gif" alt="decoupled_f result">
-                  <figcaption>Decoupled F</figcaption>
-                </figure>
-            </div>
-            <div class="column">
-                <figure class="image">
-                  <img src="static/images/decoupled_d.gif" alt="decoupled_d result">
-                  <figcaption>Decoupled D</figcaption>
+                  <figcaption>f</figcaption>
                 </figure>
             </div>
             <div class="column">
                 <figure class="image">
                   <img src="static/images/decoupled_g.gif" alt="decoupled_g result">
-                  <figcaption>Decoupled G</figcaption>
+                  <figcaption>g</figcaption>
                 </figure>
             </div>
         </div>
